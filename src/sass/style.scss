@@ -1,0 +1,49 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap'); //установить свой шрифт
+
+@import 'base/variables';
+@import 'base/mixins';
+
+/* СБРОС ДЕФОЛТНЫХ СТИЛЕЙ НАЧАЛО */
+* {
+    font-family: 'Poppins', sans-serif; //указать свой шрифт
+    margin: 0;
+    padding: 0;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/* СБРОС ДЕФОЛТНЫХ СТИЛЕЙ КОНЕЦ */
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.test-color{
+    color: $main-color; //пример исп. переменной
+}
+
+
+
+
+
+@import 'blocks/media'; //должно быть импортированно в самом низу (после всех остальных секций)!
